@@ -9,12 +9,19 @@ Map technoUrl = {
   "Dart": "https://www.dartlang.org/",
   "Mysql": "https://www.mysql.com/",
   "Canvas": "http://www.w3schools.com/html/html5_canvas.asp",
-  "Javascript": "https://www.javascript.com"
+  "Javascript": "https://www.javascript.com",
+  "Angular2": "https://angular.io/docs/dart/latest/index.html",
+  "Django": "https://www.djangoproject.com/start/overview/",
+  "Html": "http://www.w3schools.com/html/default.asp"
 };
 
 void main() {
-  querySelector('#canvas').onClick.listen((_){ window.open('../../canvas%20experimenting/web', "Canvas Experiment"); });
-  querySelector('#note_poly').onClick.listen((_){ window.open('../../perso_poly/build/web', "TODO Lists"); });
+  querySelector('#canvas').parent.onClick.listen((_){ window.open('perso/canvas%20experimenting/web', "Canvas Experiment"); });
+  querySelector('#note_poly').parent.onClick.listen((_){ window.open('perso/perso/build/web', "TODO Lists"); });
+  querySelector('#blood_raven').parent.onClick.listen((_){ window.open('perso/blood_raven_client/', "Blood Raven"); });
+  querySelector('#portfolio').parent.onClick.listen((_){ window.open('perso/portfolio', 'Porfolio'); });
+
+  querySelectorAll('.contentShowcaseParagraph').onClick.listen((e){ e.preventDefault(); });
 
   querySelectorAll('.showcaseTechno').forEach((Element el){
     el.onClick.listen((_){

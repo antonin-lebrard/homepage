@@ -71,5 +71,15 @@
 @-o-keyframes contentShowcaseContainerHover {from{color:#000;background-color:inherit;box-shadow:0 0 0 0 rgba(128,128,128,0.6);}to{color:#fff;background-color:#3c7bd2;box-shadow:0 0 10px 0 rgba(128,128,128,0.6);}}
 @-ms-keyframes contentShowcaseContainerHover {from{color:#000;background-color:inherit;box-shadow:0 0 0 0 rgba(128,128,128,0.6);}to{color:#fff;background-color:#3c7bd2;box-shadow:0 0 10px 0 rgba(128,128,128,0.6);}}
 
+@keyframes contentWIPShowcaseContainerHover {from{border-bottom-color:#fff;background-color:inherit;box-shadow:0 0 0 0 rgba(128,128,128,0.6);}to{border-bottom-color:#000;background-color:rgba(255, 235, 59, 0.26);box-shadow:0 0 10px 0 rgba(128,128,128,0.6);}}
+@-webkit-keyframes contentWIPShowcaseContainerHover {from{border-bottom-color:#fff;background-color:inherit;box-shadow:0 0 0 0 rgba(128,128,128,0.6);}to{border-bottom-color:#000;background-color:rgba(255, 235, 59, 0.26);box-shadow:0 0 10px 0 rgba(128,128,128,0.6);}}
+@-moz-keyframes contentWIPShowcaseContainerHover {from{background-color:inherit;box-shadow:0 0 0 0 rgba(128,128,128,0.6);}to{background-color:rgba(255, 235, 59, 0.26);box-shadow:0 0 10px 0 rgba(128,128,128,0.6);}}
+@-o-keyframes contentWIPShowcaseContainerHover {from{background-color:inherit;box-shadow:0 0 0 0 rgba(128,128,128,0.6);}to{background-color:rgba(255, 235, 59, 0.26);box-shadow:0 0 10px 0 rgba(128,128,128,0.6);}}
+@-ms-keyframes contentWIPShowcaseContainerHover {from{background-color:inherit;box-shadow:0 0 0 0 rgba(128,128,128,0.6);}to{background-color:rgba(255, 235, 59, 0.26);box-shadow:0 0 10px 0 rgba(128,128,128,0.6);}}
 
+@keyframes contentWIPShowcaseHover {}
+@-webkit-keyframes contentWIPShowcaseHover {}
+@-moz-keyframes contentWIPShowcaseHover {}
+@-o-keyframes contentWIPShowcaseHover {}
+@-ms-keyframes contentWIPShowcaseHover {}
 
