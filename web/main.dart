@@ -15,17 +15,58 @@ Map technoUrl = {
   "Html": "http://www.w3schools.com/html/default.asp"
 };
 
-void main() {
-  querySelector('#canvas').parent.onClick.listen((_){ window.open('perso/canvas%20experimenting/web', "Canvas Experiment"); });
-  querySelector('#note_poly').parent.onClick.listen((_){ window.open('perso/perso/build/web', "TODO Lists"); });
-  querySelector('#blood_raven').parent.onClick.listen((_){ window.open('perso/blood_raven_client/', "Blood Raven"); });
-  querySelector('#portfolio').parent.onClick.listen((_){ window.open('perso/portfolio', 'Porfolio'); });
+Map projectsUrls = {
+  'canvas': ["perso/canvas%20experimenting/web", "Canvas Experiment"],
+  'note_poly': ["perso/perso/build/web", "TODO Lists"],
+  'blood_raven': ["perso/blood_raven_client/", "Blood Raven"],
+  'portfolio': ["perso/portfolio", 'Portfolio']
+};
 
-  querySelectorAll('.contentShowcaseParagraph').onClick.listen((e){ e.preventDefault(); });
+List<Element> showcases = [ querySelector('#canvas'), querySelector('#note_poly'), querySelector('#blood_raven'), querySelector('#portfolio') ];
+
+void main() {
+
+  showcases.forEach((Element el){
+    el.parent.onClick.listen((_){
+      window.open(projectsUrls[el.id][0], projectsUrls[el.id][1]);
+    });
+    el.parent.onMouseOver.listen((_){
+      print("bla");
+      if (el.parent.classes.contains('contentWIPShowcaseContainer')){
+        querySelector('#wipContainer').classes.add('animateColorFocusHoverClass');
+        querySelector('#finished').classes.add('animateColorNonFocusHoverClass');
+        querySelector('#finishedContainer').classes.add('animateColorNonFocusHoverClass');
+      } else {
+        querySelector('#finishedContainer').classes.add('animateColorFocusHoverClass');
+        querySelector('#wip').classes.add('animateColorNonFocusHoverClass');
+        querySelector('#wipContainer').classes.add('animateColorNonFocusHoverClass');
+      }
+    });
+    el.parent.onMouseOut.listen((_){
+      if (el.parent.classes.contains('contentWIPShowcaseContainer')){
+        querySelector('#wipContainer').classes.remove('animateColorFocusHoverClass');
+        querySelector('#finished').classes.remove('animateColorNonFocusHoverClass');
+        querySelector('#finishedContainer').classes.remove('animateColorNonFocusHoverClass');
+      } else {
+        querySelector('#finishedContainer').classes.remove('animateColorFocusHoverClass');
+        querySelector('#wip').classes.remove('animateColorNonFocusHoverClass');
+        querySelector('#wipContainer').classes.remove('animateColorNonFocusHoverClass');
+      }
+    });
+  });
 
   querySelectorAll('.showcaseTechno').forEach((Element el){
     el.onClick.listen((_){
       window.open(technoUrl[el.innerHtml.substring(1)], el.innerHtml.substring(1));
+    });
+  });
+
+  querySelectorAll('.colorHoverIndicationContainer').forEach((Element el){
+    el.onMouseOver.listen((_){
+      el.classes.add('animateColorFocusHoverClass');
+    });
+    el.onMouseOut.listen((_){
+      el.classes.remove('animateColorFocusHoverClass');
     });
   });
 
