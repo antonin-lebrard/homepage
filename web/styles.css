@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+#upperBox{
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    bottom: 70%;
+    width: 100%;
+}
+#lineSeparator{
+    position: absolute;
+    height: 0;
+    top: 30%;
+    left: 30%;
+    border: 1px solid #000;
+    z-index: 11;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation: lineSeparatorAppear 3s 3s forwards;
+    animation-timing-function: ease-in-out;
+    animation: lineSeparatorAppear 3s 3s forwards;
+    opacity: 0;
+}
+#lineSeparatorBlue{
+    position: absolute;
+    height: 0;
+    top: 30%;
+    left: 30%;
+    border: 1px solid #3c7bd2;
+    z-index: 11;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation: lineSeparatorColorBlue 1.5s;
+    -webkit-animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(1,.0,.75,.7)  ;
+    animation: lineSeparatorColorBlue 1.5s;
+    animation-iteration-count: 2;
+    opacity: 0;
+}
+#lineSeparatorGreen{
+    position: absolute;
+    height: 0;
+    top: 30%;
+    left: 30%;
+    border: 1px solid #2a8c21;
+    z-index: 11;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation: lineSeparatorColorGreen 1.5s;
+    -webkit-animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(1,.01,.75,.7);
+    animation: lineSeparatorColorGreen 1.5s;
+    animation-iteration-count: 2;
+    opacity: 0;
+}
+#lineSeparatorRed{
+    position: absolute;
+    height: 0;
+    top: 30%;
+    left: 30%;
+    border: 1px solid #ff5565;
+    z-index: 11;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation: lineSeparatorColorRed 1.5s;
+    -webkit-animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(1,.17,.75,.7) ;
+    animation: lineSeparatorColorRed 1.5s;
+    animation-iteration-count: 2;
+    opacity: 0;
+}
+#nameBox{
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    top: 25%;
+    left: 35%;
+    color: #000;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+#authorBox{
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    top: 30%;
+    left: 35%;
+    color: #9F9F9F;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    padding-top: 10px;
+}
+#downBox{
+    position: absolute;
+    background-color: inherit;
+    top: 30%;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+}
+#contentBackground{
+    position: absolute;
+    background-color: inherit;
+    top: 30%;
+    margin-top: 60px;
+    width: 25%;
+    height: auto;
+    left: 36.5%;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation: contentBackg7roundAppear 2s forwards;
+    animation-timing-function: ease-in-out;
+    animation: contentBackgroundAppear 2s forwards;
+    color: #fff;
+    z-index: 10;
+    padding: 20px 15px 20px 15px;
+}
+.letterTitle{
+    float: left;
+    position: relative;
+    opacity: 0;
+    overflow: hidden;
+    font-family: customFont, serif;
+    z-index: 1;
+}
+.letterAuthor{
+    float: left;
+    position: relative;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1;
+    font-family: Lucida Console, sans-serif;
+    font-size: small;
+}
+.contentShowcaseContainer{
+    padding: 5px 5px 10px;
+    color: #000;
+    text-align: center;
+}
+.contentShowcaseContainer:hover{
+    animation: contentShowcaseContainerHover 0.3s forwards;
+    -webkit-animation: contentShowcaseContainerHover 0.3s forwards;
+}
+.contentShowcase{
+    display: table;
+    vertical-align: middle;
+    margin: 5px auto 10px auto;
+    cursor: pointer;
+    font-family: customFontShowcase, sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    line-height: 17px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.showcaseParagraph{
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: customFontParagraph, sans-serif;
+    font-size: 12px;
+}
+.showcaseTechno{
+    display: inline;
+    color: inherit;
+    font-style: italic;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 900px){
+    #nameBox{
+        top: 23%;
+        height: 8%;
+    }
+}
+@media screen and (max-height: 650px){
+    #nameBox{
+        top: 20%;
+        height: 10%;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 650px){
+    #nameBox{
+        width: 50%;
+        left: 26%;
+    }
+    #authorBox{
+        width: 50%;
+        left: 26%;
+    }
+    #contentBackground{
+        width: 60%;
+        left: 19%;
+    }
+}
+@media screen and (max-width: 650px){
+    #nameBox{
+        width: 99%;
+        left: 1%;
+    }
+    #authorBox{
+        width: 99%;
+        left: 1%;
+    }
+    #contentBackground{
+        width: 75%;
+        left: 10%;
+    }
+}
+@media screen and (max-width: 420px){
+    #contentBackground{
+        width: 90%;
+        left: 1%;
+    }
+}
+@font-face {
+    font-family: customFont;
+    src: url("fonts/Oranienbaum.ttf");
+}
+@font-face {
+    font-family: customFontShowcase;
+    src: url("fonts/Barkentina.otf");
+}
+@font-face {
+    font-family: customFontParagraph;
+    src: url("fonts/Nilland-Black.ttf");
+}
