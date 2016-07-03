@@ -12,20 +12,25 @@ Map technoUrl = {
   "Javascript": "https://www.javascript.com",
   "Angular2": "https://angular.io/docs/dart/latest/index.html",
   "Django": "https://www.djangoproject.com/start/overview/",
-  "Html": "http://www.w3schools.com/html/default.asp"
+  "Html": "http://www.w3schools.com/html/default.asp",
+  "WebGL": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL",
 };
 
 Map projectsUrls = {
   'canvas': ["perso/canvas%20experimenting/web", "Canvas Experiment"],
   'note_poly': ["perso/perso/build/web", "TODO Lists"],
   'blood_raven': ["perso/blood_raven_client/", "Blood Raven"],
-  'portfolio': ["perso/portfolio", 'Portfolio']
+  'portfolio': ["perso/portfolio", 'Portfolio'],
+  'webgl_test': ["perso/chess_webgl", "WebGL Test"],
 };
 
-List<Element> showcases = [ querySelector('#canvas'), querySelector('#note_poly'), querySelector('#blood_raven'), querySelector('#portfolio') ];
+List<Element> showcases = [
+];
 
 void main() {
-
+  for (String name in projectsUrls.keys){
+    showcases.add(querySelector("#$name"));
+  }
   showcases.forEach((Element el){
     el.parent.onClick.listen((_){
       window.open(projectsUrls[el.id][0], projectsUrls[el.id][1]);
