@@ -22,6 +22,7 @@ Map projectsUrls = {
   'blood_raven': ["perso/blood_raven_client/", "Blood Raven"],
   'portfolio': ["perso/portfolio", 'Portfolio'],
   'webgl_test': ["perso/chess_webgl", "WebGL Test"],
+  'lastfmStats': ["perso/lastfmStats", "LastFm Stats"],
 };
 
 List<Element> showcases = [
