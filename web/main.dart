@@ -14,6 +14,9 @@ Map technoUrl = {
   "Django": "https://www.djangoproject.com/start/overview/",
   "Html": "http://www.w3schools.com/html/default.asp",
   "WebGL": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL",
+  "Scrypt": "https://en.wikipedia.org/wiki/Scrypt",
+  "AES": "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard",
+  "TOTP": "https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm",
 };
 
 Map projectsUrls = {
@@ -23,6 +26,7 @@ Map projectsUrls = {
   'portfolio': ["perso/portfolio", 'Portfolio'],
   'webgl_test': ["perso/chess_webgl", "WebGL Test"],
   'lastfmStats': ["perso/lastfmStats", "LastFm Stats"],
+  'twoAuthWeb': ["perso/twoAuthWeb", "2FA keys"],
 };
 
 List<Element> showcases = [
