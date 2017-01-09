@@ -5,18 +5,18 @@ import 'dart:html';
 import 'dart:async';
 
 Map technoUrl = {
-  "Polymer": "https://www.polymer-project.org/1.0/",
-  "Dart": "https://www.dartlang.org/",
-  "Mysql": "https://www.mysql.com/",
-  "Canvas": "http://www.w3schools.com/html/html5_canvas.asp",
-  "Javascript": "https://www.javascript.com",
-  "Angular2": "https://angular.io/docs/dart/latest/index.html",
-  "Django": "https://www.djangoproject.com/start/overview/",
-  "Html": "http://www.w3schools.com/html/default.asp",
-  "WebGL": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL",
-  "Scrypt": "https://en.wikipedia.org/wiki/Scrypt",
-  "AES": "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard",
-  "TOTP": "https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm",
+  "Polymer": ["https://www.polymer-project.org/1.0/", "polymer"],
+  "Dart": ["https://www.dartlang.org/", "dart"],
+  "Mysql": ["https://www.mysql.com/", "mysql"],
+  "Canvas": ["http://www.w3schools.com/html/html5_canvas.asp", "blank"],
+  "Javascript": ["https://www.javascript.com", "javascript"],
+  "Angular2": ["https://angular.io/docs/dart/latest/index.html", "angular2"],
+  "Django": ["https://www.djangoproject.com/start/overview/", "django"],
+  "Html": ["http://www.w3schools.com/html/default.asp", "blank"],
+  "WebGL": ["https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "blank"],
+  "Scrypt": ["https://en.wikipedia.org/wiki/Scrypt", "blank"],
+  "AES": ["https://en.wikipedia.org/wiki/Advanced_Encryption_Standard", "blank"],
+  "TOTP": ["https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm", "blank"],
 };
 
 Map projectsUrls = {
@@ -41,7 +41,6 @@ void main() {
       window.open(projectsUrls[el.id][0], projectsUrls[el.id][1]);
     });
     el.parent.onMouseOver.listen((_){
-      print("bla");
       if (el.parent.classes.contains('contentWIPShowcaseContainer')){
         querySelector('#wipContainer').classes.add('animateColorFocusHoverClass');
         querySelector('#finished').classes.add('animateColorNonFocusHoverClass');
@@ -66,8 +65,10 @@ void main() {
   });
 
   querySelectorAll('.showcaseTechno').forEach((Element el){
+    String keyTechno = technoUrl[el.innerHtml.substring(1)][1];
+    el.classes.add("${keyTechno}Techno");
     el.onClick.listen((_){
-      window.open(technoUrl[el.innerHtml.substring(1)], el.innerHtml.substring(1));
+      window.open(technoUrl[el.innerHtml.substring(1)][0], el.innerHtml.substring(1));
     });
   });
 
